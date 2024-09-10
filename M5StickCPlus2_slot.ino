@@ -19,7 +19,7 @@ int state = SLOTS_INIT;//老虎机状态值     设置为初始状态
 // setup()//初始化函数
 //
 void setup() {
- 	M5.begin();
+ 	M5.begin();//初始化M5
 	M5.Lcd.setRotation(3);
 	M5.Lcd.fillScreen(TFT_BLACK);//设置屏幕背景色为黑色
 	M5.Lcd.setSwapBytes(true);
@@ -37,7 +37,7 @@ void setup() {
 // loop()
 //
 void loop() {
-	unsigned long tick = millis();
+	unsigned long tick = millis();//获得当前心跳值
 	static unsigned long flushTick;
 	static int flushCount;
 
