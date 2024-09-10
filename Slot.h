@@ -7,7 +7,10 @@
 
 #define SLOT_COUNT 5
 
-enum SlotState { SLOT_INIT, SLOT_START, SLOT_STOP, SLOT_DRIFT };
+#define Speed_MAX 800//Maximum speed of slot machine rotation
+#define Speed_MIN 50//slot machine reduced speed
+
+enum SlotState { SLOT_INIT, SLOT_START, SLOT_STOP, SLOT_DRIFT };//Slot machine status
 
 class Slot {
 public:
@@ -15,8 +18,8 @@ public:
 	void init(int unit, int index);
 	void draw();
 	void flush(uint16_t bgColor = TFT_RED);
-	void start(int acc = 12, int maxVel = 720);
-	void stop(int acc = -20, int minVel = 50);
+	void start(int acc = 12, int maxVel = Speed_MAX);
+	void stop(int acc = -20, int minVel = Speed_MIN);
 	int getSymbol() { return (index == -1) ? -1 : symbolIndices[index]; }
 	bool update();
 
