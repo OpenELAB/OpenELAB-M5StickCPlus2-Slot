@@ -16,8 +16,8 @@ int Slot::shadowHeight;
 uint8_t *Slot::shadowBrigtness;
 uint16_t *Slot::buffer;
 
-#define PAD_X 2
-#define PAD_Y 0
+#define PAD_X 2//列间隔
+#define PAD_Y 0//图标间隔
 
 void Slot::init(int unit, int _index) {
 	index = _index;
@@ -28,13 +28,13 @@ void Slot::init(int unit, int _index) {
 	state = SLOT_INIT;
 }
 
-void Slot::setReel(const int *_symbolIndices, int _reelLength) {
+void Slot::setReel(const int *_symbolIndices, int _reelLength) {//Set the slot machine to roll
 	symbolIndices = _symbolIndices;
 	reelLength = _reelLength;
 	reelHeight = SYM_HEIGHT * reelLength;
 }
 
-void Slot::draw() {
+void Slot::draw() {// key function to draw on slot machine icons
 	int offset = (int)roundf(degree * reelHeight / 360.f);
 	offset = offset + SYM_HEIGHT / 2 - height / 2;
 	int x = posX;
@@ -55,7 +55,7 @@ void Slot::draw() {
 		if (y < height - shadowHeight && y + h > height - shadowHeight) {
 			h = height - shadowHeight - y;
 		}
-		const uint16_t* data = slot_symbols[symbolIndices[symbolIndex]] + symbolY * SYM_WIDTH;
+		const uint16_t* data = slot_symbols[symbolIndices[symbolIndex]] + symbolY * SYM_WIDTH;//从image文件中读取图片数据到data
 		if (y < shadowHeight || y >= height - shadowHeight) {
 			int sh = shadowHeight - shadowY;
 			if (sh > h) {
@@ -71,7 +71,7 @@ void Slot::draw() {
 			h = sh;
 		} else {
 			shadowY = 0;
-			M5.Lcd.pushImage(x, y + PAD_Y, SYM_WIDTH, h, data);
+			M5.Lcd.pushImage(x, y + PAD_Y, SYM_WIDTH, h, data);// Drawing images
 		}
 		offset += h;
 		y += h;
@@ -91,21 +91,21 @@ void Slot::flush(uint16_t bgColor) {
 	}
 }
 
-void Slot::start(int _acc, int _maxVel) {
+void Slot::start(int _acc, int _maxVel) {//Launch Slot Machines
 	acc = _acc;
 	maxVel = _maxVel;
 	tick = millis();
-	state = SLOT_START;
+	state = SLOT_START;//Set slot machine status
 	index = -1;
 }
 
-void Slot::stop(int _acc, int _minVel) {
+void Slot::stop(int _acc, int _minVel) {//Set slot machine status
 	acc = _acc;
 	minVel = _minVel;
 	state = SLOT_STOP;
 }
 
-bool Slot::update() {
+bool Slot::update() {// Update the current display of the slot machine
 	if (state == SLOT_INIT) return false;
 	vel += acc;
 	if (vel > maxVel) {
@@ -147,7 +147,7 @@ bool Slot::update() {
 //
 // edge shadow
 //
-void Slot::initShadow(int _shadowHeight) {
+void Slot::initShadow(int _shadowHeight) {//Initialize shadows
 	shadowHeight = _shadowHeight;
 	shadowBrigtness = (uint8_t*)malloc(shadowHeight);
 	buffer = (uint16_t*)malloc(SYM_WIDTH * shadowHeight * sizeof(uint16_t));
@@ -158,7 +158,7 @@ void Slot::initShadow(int _shadowHeight) {
 	}
 }
 
-uint16_t Slot::darker(uint16_t rgb, uint8_t brightness) {
+uint16_t Slot::darker(uint16_t rgb, uint8_t brightness) {//Get the color parameter
 	uint16_t r = ((rgb & 0xF800) >> 8) * brightness / 255;
 	uint16_t g = ((rgb & 0x07E0) >> 3) * brightness / 255;
 	uint16_t b = ((rgb & 0x001F) << 3) * brightness / 255;
@@ -169,7 +169,6 @@ uint8_t Slot::calcBrightness(float step) {
 	return (uint8_t)(sigmoid(step) / sigmoid(1.0f) * 255.f);
 }
 
-// https://blog.eyewire.org/ease-out-the-half-sigmoid-xpost/
 float Slot::sigmoid(float t) {
 	const float k = 4.0f;
 	return (1.0f / (1.0f + exp(-k * t))) - 0.5f;
