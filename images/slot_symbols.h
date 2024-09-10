@@ -1,3 +1,4 @@
+/*图片十六进制文件*/
 #include "slot_seven.h"
 #include "slot_bar.h"
 #include "slot_openelab.h"
@@ -7,7 +8,7 @@
 
 #define SYM_WIDTH 48
 #define SYM_HEIGHT 48
-#define SYM_COUNT 6
+#define SYM_COUNT 5
 
 const uint16_t *slot_symbols[] = {
 	slot_seven,
