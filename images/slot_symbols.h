@@ -1,4 +1,4 @@
-/*图片十六进制文件*/
+/* Picture hex file */
 #include "slot_seven.h"
 #include "slot_bar.h"
 #include "slot_openelab.h"
