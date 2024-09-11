@@ -59,4 +59,5 @@
 
 联系方式
 
-如何联系维护者或开发者。
+如何联系维护者或开发者。  
+源码改自于<a src="https://github.com/Sarah-C/M5StickC_Plus_Slot_Machine">M5StickCPlus</a>
