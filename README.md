@@ -5,28 +5,22 @@
 - 体积小巧
 - 趣味十足
 - 功耗低
+## 项目结构
 ``` 
-│── README.md          # 项目说明文件
-│── /src               # 源代码目录
-│── /docs              # 文档目录
-│── /examples          # 示例代码目录
-│── LICENSE            # 开源协议文件
-安装与运行
+│── README.md                # 项目说明文件
+│── M5StickCPlus2_slot.ino   # 源代码文件
+│── Slot.cpp                 # Slot功能实现文件
+│── SLot.h                   # Slot功能定义文件
+│── image                    # 图片素材文件
 ```
-指导用户如何安装和运行项目。
+## 安装与运行
 
-先决条件
-列出运行此项目所需的依赖和工具，如：
-
-软件依赖：Node.js、Python、Arduino等
-硬件要求（如果有）：开发板、传感器等
-安装步骤
-克隆项目仓库：
-bash
-```C
-git clone https://github.com/your-username/project-name.git
-```
-安装依赖：
+### 先决条件
+软件依赖： ``__image2Lcd__、__Arduino IDE__、__VScode__ or __text__等``   
+硬件要求：__USB-C__、__M5StickCPlus2__ 等  
+依赖要求：__M5StickCPlus2__、__Arduino__
+### Arduino IDE 安装步骤
+### 安装依赖：
 bash
 复制代码
 npm install / pip install / 其他安装命令
