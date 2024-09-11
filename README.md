@@ -6,7 +6,7 @@
 - 🚀 Installation and Operation
 - 🔧 Instructions for use
 - 🔮 Next Issue Preview
-## M5StickCPlus2_Slot project
+# M5StickCPlus2_Slot project
 ## Project description.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This project creates a mini version of a slot machine 🎰 by using M5StickC Plus2. Players can start the reels and stop them column by column by simply pressing a button to enjoy an exciting gaming experience! The project features a 1.14-inch TFT display that showcases five cool columns of reels, each containing 10 different icons, and the reels spin with a lot of motion 🎡.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By interacting with the M5StickC Plus2's buttons, players can easily control the start and stop of the game, as if they were in a real slot machine 🎮. This project not only demonstrates the power of M5StickC Plus2 in graphic display and hardware control, but also provides a fun and interactive experience for players, making it a great learning and reference project for hardware development and game development enthusiasts 💡!
