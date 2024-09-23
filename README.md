@@ -103,6 +103,7 @@ By changing PAD_X and PAD_Y, you can change the spacing between columns and grap
 In the next issue, we will explain in detail how to change the picture of the slot machine, we will get the hexadecimal parameters of the picture by taking the model of the picture and adjusting it to the format we want, and then present the picture we want on the slot machine __Stay tuned!!!__
 
 ![QQ_1726122393803](https://github.com/user-attachments/assets/71507de5-dad0-4688-84bf-56cc25878e35)
+### Next Issue Link
 
 ## How to contact the maintainer or developer
 __OpenELAB:__   
