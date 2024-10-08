@@ -69,7 +69,8 @@ https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json
 ### compile and run
 1、After completing the installation of the dependencies, open the good downloaded zip archive
 
-![QQ_1726107516108](https://github.com/user-attachments/assets/cb2362f7-1871-418e-94dd-92ddfe7284b7)  
+![QQ_1728369077423](https://github.com/user-attachments/assets/c5a627bb-d95d-43a0-9e1e-1440b4646487)
+
 
 2、Connect the Plus2 to your computer using USB-C, select Tools->Port to choose your own port
 
