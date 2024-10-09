@@ -35,9 +35,12 @@ This project creates a mini version of a slot machine 🎰 by using M5StickC Plu
 ## Installation and operation
 
 ### precondition
-Software dependency: __Arduino IDE__, __VScode__ or __text__, etc.
-Hardware requirements: __USB-C cable__, __M5StickCPlus2__, etc.
-Dependencies: __M5StickCPlus2 library__, __Arduino library__, etc.
+Software dependency: __Arduino IDE__, __VScode__ or __text__, etc.  
+
+Hardware requirements: __USB-C cable__, __M5StickCPlus2__, etc.  
+
+Dependencies: __M5StickCPlus2 library__, __Arduino library__, etc.  
+
 ### Arduino IDE Installation Steps
 ```
 Link: upload later
