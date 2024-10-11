@@ -123,6 +123,7 @@ __Discord__
 [![resized_image_150x150](https://github.com/user-attachments/assets/93ecd098-3391-45bb-9d80-b166c197a475)](https://discord.gg/VQspWyck)
 
 ## 购买链接
-![M5StickCPlus2](https://openelab.io/products/m5stickcplus2?_pos=2&_sid=d60b08054&_ss=r)
-![USB-C](https://openelab.io/products/usb-a-to-usb-type-c-cable-white?_pos=2&_psq=USB-C&_ss=e&_v=1.0)
+[M5StickCPlus2](https://openelab.io/products/m5stickcplus2?_pos=2&_sid=d60b08054&_ss=r)  
+
+[USB-C](https://openelab.io/products/usb-a-to-usb-type-c-cable-white?_pos=2&_psq=USB-C&_ss=e&_v=1.0)
 
