@@ -1,4 +1,4 @@
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__Hi👋__，Welcome to this tutorial on implementing a super cool Slot Machine🎰 project using M5StickC Plus2! This project series will be divided into three parts, and today you'll be in the first part, focusing on how to build the project, run the code, and implement the core functionality.Next, you will be taken through the following steps 📜 to dive into the source code and get started with this project with ease! Ready? Let's get started 🚀! 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__Hi__ 👋, welcome to this tutorial on building a super cool slot machine 🎰 project with the M5StickC Plus2! This project is divided into three parts, and today we’ll focus on the first part: building the project, running the code, and implementing the core functionality. In the following steps 📜, you'll explore the source code and get started easily. Ready? Let's dive in 🚀!  
 - 📝 Project Description
 - ✨ Functional Features
 - 🏗 Project Structure
@@ -8,14 +8,13 @@
   
 [Demo video 📺]()
 # M5StickCPlus2_Slot Project
-## Project Information.
-This project creates a mini version of a slot machine 🎰 by using M5StickC Plus2. Players can start the reels and stop them column-by-column by simply pressing a button to enjoy an exciting gaming experience! The project features a 1.14-inch TFT display that showcases five cool columns of reels, each containing 10 different icons, and the reels spin with a lot of motion 🎡.
-  By interacting with the M5StickC Plus2's buttons, players can easily control the start and stop of the game, as if they were in a real slot machine 🎮. This project not only demonstrates the power of M5StickC Plus2 in graphic display and hardware control, but also provides a fun and interactive experience for players, making it a great learning and reference project for hardware development and game development enthusiasts 💡!
+## Project Description
+This project creates a mini version of a slot machine 🎰 using the M5StickC Plus2. Players can start the reels and stop them column by column by simply pressing a button, enjoying an exciting gaming experience! The project features a 1.14-inch TFT display showcasing five columns of reels, each containing 10 different icons, with the reels spinning dynamically 🎡. By interacting with the M5StickC Plus2's buttons, players can easily control the start and stop of the game, simulating a real slot machine 🎮. This project not only demonstrates the power of the M5StickC Plus2 in graphic display and hardware control but also offers a fun, interactive experience—making it an excellent learning project for hardware and game development enthusiasts 💡!
 
 ## Functional Features
-- 📏 Compact size: lightweight design, suitable for carrying around, easy to build.
-- 🎉 Fun: highly interactive, as if you are in the real world of slot machine games.
-- 🔋 Low power consumption: high efficiency and low power consumption, prolonging the use of the equipment
+- 📏 Compact size: Lightweight design, easy to carry, and simple to assemble.
+- 🎉 Fun: Highly interactive, making you feel as if you're immersed in the real world of slot machine games.
+- 🔋 Low power consumption: High efficiency and low energy usage, extending the device's operating time.
 ## Project structure
 ``` 
 │── README.md             # Project description file
@@ -46,7 +45,7 @@ Dependencies: __M5StickCPlus2 library__, __Arduino library__, etc.
 Link: upload later
 ```
 ### Installation of dependencies
-1、After installing the Arduino IDE, open the Arduino settings, copy the M5 development board link to the arrow shown and click OK to save it.
+1、After installing the Arduino IDE, open the settings, paste the M5 development board link into the designated field, and click OK to save the changes.
 ```
 https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json
 ```
@@ -56,7 +55,7 @@ https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json
 
 ![QQ_1726105693629](https://github.com/user-attachments/assets/e70b4f19-c21a-4ea5-80e2-4d150b54a35f)  
   
-3、Search for M5Stack and choose to install it, it's already installed on this host so I won't repeat the installation.
+3、Search for M5Stack in the Arduino Library Manager and install it. Since it's already installed on this system, I won’t repeat the installation process.
 
 ![QQ_1726105854495](https://github.com/user-attachments/assets/11b18b6c-c8db-4ea4-b209-d22dd26eebbe) 
 
@@ -65,32 +64,32 @@ https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json
 ![QQ_1726106317846](https://github.com/user-attachments/assets/203d874b-f316-4ae7-827b-2e01493ce08d)
 
 
-5、Next, install the M5StickCPlus2 library, select Tools->Manage Libraries, search for M5StickCPlus2, and then select Install, which will not be repeated if it is already installed.
+5、Next, install the M5StickCPlus2 library by selecting Tools -> Manage Libraries, searching for "M5StickCPlus2," and clicking Install. If the library is already installed, the installation process will be skipped.
 
 ![QQ_1726106703496](https://github.com/user-attachments/assets/312bc9e1-521c-479e-831a-a3c22e45a6ec)  
 
 ### compile and run
-1、After completing the installation of the dependencies, open the good downloaded zip archive
+1、After completing the installation of the dependencies, open the downloaded ZIP archive.
 
 ![QQ_1728369077423](https://github.com/user-attachments/assets/c5a627bb-d95d-43a0-9e1e-1440b4646487)
 
 
-2、Connect the Plus2 to your computer using USB-C, select Tools->Port to choose your own port
+2、Connect the Plus2 to your computer using a USB-C cable. Then, go to Tools -> Port and select the correct port.
 
 ![QQ_1726107673971](https://github.com/user-attachments/assets/17f0392a-b753-4aba-946c-ede75ba9092f)  
 
-3、Click on compile and then click on upload when the compilation is complete
+3、Click Compile, and once the compilation is complete, click Upload.
 
 ![QQ_1726107957719](https://github.com/user-attachments/assets/c1f953ad-5355-44e8-af0c-ac5da7542aa6)  
 
 ## Instructions for use
 - ### Order and number of pictures
-The slot machine has five columns, each of which can hold up to 10 icons, and you can adjust their order at will!💡At the moment, we have prepared six 48x48 pixel material icons, their RGB565 hexadecimal data is already in the code, corresponding to elements 0 to 5 in the slot_symbols array. If you want to change the order and number of icons in each column, you can easily change the number in the symbolIndices array to change the display of the icons in each column!🔧🎨  
+The slot machine has five columns, each capable of holding up to 10 icons, and you can freely adjust their order! 💡 Currently, six 48x48 pixel icons are prepared, with their RGB565 hexadecimal data embedded in the code, corresponding to elements 0 to 5 in the slot_symbols array. To modify the order or number of icons in each column, simply adjust the values in the symbolIndices array to customize the icon display in each column! 🔧🎨 
 
 ![QQ_1726108827608](https://github.com/user-attachments/assets/45b5878d-3624-47b5-a671-fc40937d1898)
 
 - ### Column-to-column and figure-to-figure spacing
-By changing PAD_X and PAD_Y, you can change the spacing between columns and graphs, usually the default is 2 and 0. 
+By adjusting PAD_X and PAD_Y, you can modify the spacing between columns and icons. The default values are usually set to 2 and 0, respectively.
 
 ![QQ_1726109192019](https://github.com/user-attachments/assets/3e14c412-8342-486d-ba00-b6a0f4d357ac)
 
@@ -104,7 +103,7 @@ By changing PAD_X and PAD_Y, you can change the spacing between columns and grap
   ![QQ_1726109492610](https://github.com/user-attachments/assets/aaa6b4a0-79b1-491a-8dbd-ca76cc8c1eee)
 
 ## Next Issue Preview
-In the next issue, we will explain in detail how to change the picture of the slot machine, we will get the hexadecimal parameters of the picture by taking the model of the picture and adjusting it to the format we want, and then present the picture we want on the slot machine __Stay tuned!!!__
+In the next installment, we will provide a detailed guide on how to change the slot machine's images. We will generate the hexadecimal parameters of the images by modeling them and adjusting them to the desired format. Once done, the customized images will be displayed on the slot machine. __Stay tuned!!!__
 
 ![QQ_1726122393803](https://github.com/user-attachments/assets/71507de5-dad0-4688-84bf-56cc25878e35)  
 
